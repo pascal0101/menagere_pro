@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/pexels-2.jpg');">
+        <div class="filter"></div>
+        
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-sm-6 mr-auto ml-auto">5
+                    <!-- <div class="angular-logo">
+                        <img src="assets/img/menagere_pro_.png" alt="">
+                    </div> -->
+
+                    <div class="card card-register" style="background-image: url('./assets/img/login_page.png');">
+                    
+                        
+                        <ngb-alert *ngIf="error" [type]="'danger'"  [dismissible]="false">
+                            <div class="container">
+                                <ng-container>
+                                    <i class="nc-icon nc-bell-55"></i>
+                                </ng-container>
+
+                                Nom d'utilisateur ou Mot de passe incorrect.
+                                <button type="button" name="button" class="close" (click)="error = !error">
+                                    <i class="nc-icon nc-simple-remove"></i>
+                                </button>
+                            </div>
+                        </ngb-alert>
+
+                        <form class="register-form" #formulaire="ngForm">
+                            <h3 style="text-align: center;font-weight: 1000;">MÉNAGÈRE PRO</h3>
+                            <label style="font-weight: 1000;">Nom d'utilisateur</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <input class="form-control" required id="username" type="text" ngModel name="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+                            <label style="font-weight: 1000;">Mot de passe</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="nc-icon nc-key-25"></i>
+                                    </span>
+                                </div>
+                                <input required id="password" type="password" ngModel name="password" class="form-control" placeholder="Mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
+                            </div>
+
+                            <button class="btn btn-black btn-block btn-round" [disabled]="formulaire.invalid" (click)="connexion(formulaire)"> Connexion </button>
+                        </form>
+                        <div class="forgot">
+                            <a href="#" class="btn btn-link btn-black" style="font-weight: 1000;">Mot de passe oublié?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer register-footer text-center">
+                <h6>&copy;{{test | date: 'yyyy'}}, fait avec <i class="fa fa-heart heart"></i> par Ménagère Pro</h6>
+            </div>
+        </div>
+    </div>
+</div>

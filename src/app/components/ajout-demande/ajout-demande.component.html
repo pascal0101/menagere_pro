@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/background-signup.png');">
+        <div class="filter"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-xl-6 align-self-center  mr-auto ml-auto">
+                      <div class="card card-block pr-4 pl-4" style="background-image: url('./assets/img/signup.png'); color: white;">
+                          <h3 class="inputmenagere mb-4" style="text-align: center;font-weight: 1000;">TROUVER UNE AIDE MÉNAGÈRE</h3>
+                        
+                          <form class="register-form" #formulaire="ngForm">
+                                <label style="font-weight: 1000;">Veuillez entre votre quartier</label>
+                           
+                                <div class="input-group mb-5">
+                                    <select #selectComposant required class="custom-select" id="quartier">
+                                        <option selected>Choisir un quartier ... </option>
+                                        <option *ngFor="let quartier of quartiers; let i = index" value="{{quartier.id}}">
+                                            {{quartier.libelle}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                                
+                                <button class="btn btn-black btn-block btn-round mt-4" [disabled]="formulaire.invalid" (click)="ajoutDemande(selectComposant.value)"> Enrégistrer </button>
+                          </form>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer register-footer text-center">
+                    <h6>&copy;{{test | date: 'yyyy'}}, fait avec <i class="fa fa-heart heart"></i> par Ménagère Pro</h6>
+                </div>
+            </div>
+    </div>
+</div>

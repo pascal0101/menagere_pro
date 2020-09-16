@@ -1,0 +1,93 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/background-signup.png');">
+        <div class="filter"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                      <div class="card card-register" style="background-image: url('./assets/img/signup.png');">
+                          <h3 style="text-align: center;font-weight: 1000;">S'INSCRIRE</h3>
+                          
+                          <form class="register-form" #formulaire="ngForm">
+                              
+                              
+                                <label style="font-weight: 1000;">Nom d'utilisateur</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" required id="username" type="text" ngModel name="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+
+                                <label style="font-weight: 1000;">Mot de passe</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-key-25"></i>
+                                        </span>
+                                    </div>
+                                    <input required id="password" type="password" ngModel name="password" class="form-control" placeholder="Mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
+                                </div>
+                                <label style="font-weight: 1000;">Comfirmer le mot de passe</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-key-25"></i>
+                                        </span>
+                                    </div>
+                                    <input required id="password2" type="password" ngModel name="password2" class="form-control" placeholder="Comfirmer le mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
+                                </div>
+
+                                <label style="font-weight: 1000;">Nom</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" required id="nom" type="text" ngModel name="nom" placeholder="Nom" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+
+                                <label style="font-weight: 1000;">Prénoms</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" required id="prenom" type="text" ngModel name="prenom" placeholder="Prénoms" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+
+                                <label style="font-weight: 1000;">Domicile</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" required id="domicile" type="text" ngModel name="domicile" placeholder="Domicile" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+
+                                <label style="font-weight: 1000;">Téléphone</label>
+                                <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-single-02" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" required id="tel" type="text" ngModel name="tel" placeholder="Téléphone" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+
+                              <!-- [(ngModel)]="color" -->
+                              <button class="btn btn-black btn-block btn-round" [disabled]="formulaire.invalid" (click)="sinscrire(formulaire)"> Enrégistrer </button>
+                          </form>
+                      </div>
+                    </div>
+                </div>
+                <div class="footer register-footer text-center">
+                    <h6>&copy;{{test | date: 'yyyy'}}, fait avec <i class="fa fa-heart heart"></i> par Ménagère Pro</h6>
+                </div>
+            </div>
+    </div>
+</div>
