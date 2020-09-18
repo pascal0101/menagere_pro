@@ -1,0 +1,181 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/home-page-3-1.png')">
+        <div class="filter"></div>
+        <div class="content-center">
+            <div class="container">
+                <div class="title-brand">
+                    <div class="angular-logo">
+                        <img src="assets/img/menagere_pro.png" alt="">
+                    </div>
+                    <h1 class="presentation-title">Ménagère Pro</h1>
+                    <div class="fog-low">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                    <div class="fog-low right">
+                        <img src="assets/img/fog-low.png" alt="">
+                    </div>
+                </div>
+
+                <h2 class="presentation-subtitle text-center">Marre de faire le ménage ?</h2>
+                <h3 class="presentation-subtitle text-center">Une ménagère de qualité à votre service et une seule adresse</h3>
+                
+            </div>
+        </div>
+        
+
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+        <!-- <h6 class=" category-absolute ml-auto mr-auto">Designed and coded by
+
+            <a href="https://www.creative-tim.com" target="_blank">
+                <img src="assets/img/creative-tim-white-slim2.png" class="creative-tim-logo">
+            </a>
+        </h6> -->
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="title">
+                <h3>
+                    Client ou aide ménagère, notre centre d'aide est là pour vous.
+                </h3>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><small>Client</small></h3>
+        
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs section-dark" style="background-image: url({{image_card}})">
+                        <div class="card-header card-header-primary">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#profile" data-toggle="tab" (click)="changeImageCard(0)">
+                                                <i class="material-icons">filter_vintage</i>
+                                                Ménagère Pro
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#messages" data-toggle="tab" (click)="changeImageCard(1)">
+                                                <i class="material-icons">add_business</i>
+                                                Ménagage à domicile
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#settings" data-toggle="tab" (click)="changeImageCard(2)">
+                                                <i class="material-icons">business</i>
+                                                Nettoyage de bureaux
+                                            </a>
+        
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body ">
+                            <div class="tab-content text-center">
+                                <div class="tab-pane active" id="profile">
+                                    <h2 style="color: white; font-weight: 510;">
+                                        La façon la plus simple de trouver une aide ménagère qualifiée.
+                                    </h2>
+                                    <br>
+                                    
+                                    <h6 style="color: white; font-weight: 510;">
+                                        Essayez le ménage qui satisfait 93% des clients.
+                                    </h6>
+                                </div>
+                                <div class="tab-pane" id="messages">
+                                
+                                    <h2 style="color: white; font-weight: 510;">
+                                        Votre ménage à domicile de qualité. Dès 1000 Francs CFA l’heure.
+                                    </h2>
+                                    <br>
+                                    
+                                    <h6 style="color: white; font-weight: 510;">
+                                        Faites briller votre maison quand vous voulez. Sans vous ruiner.
+                                    </h6>
+                                </div>
+                                <div class="tab-pane" id="settings">
+                                    <h2 style="color: white; font-weight: 510;">
+                                        Le nettoyage de bureaux qui fait progresser votre business.
+                                    </h2>
+                                    <br>
+                                    
+                                    <h6 style="color: white; font-weight: 510;">
+                                        Accueillez vos visiteurs dans un environnement sain tout en baissant vos charges d’entretien.
+                                    </h6>
+                                </div>
+
+                                
+                                <a *ngIf="!estConnecter()" [routerLink]="['/signup/client']" class="btn btn-outline-neutral btn-round"> S'inscrire <i class="fa fa-sign-in"></i></a>
+                                <a *ngIf="estClient()" [routerLink]="['/ajoutDemande']" class="btn btn-outline-neutral btn-round"> Trouvez une aide ménagère <i class="fa fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tabs with icons on Card -->
+        
+                </div>
+                <div class="col-md-6">
+                    <h3><small>Aide ménagère</small></h3>
+        
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs section-dark" style="background-image: url({{image_card_1}})">
+                        <div class="card-header card-header-danger">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#profile_menagere" data-toggle="tab" (click)="changeImageCard(3)">
+                                                <i class="material-icons">people_outline</i>
+                                                Ménagères
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#messages_menagere" data-toggle="tab" (click)="changeImageCard(4)">
+                                                <i class="material-icons">accessibility_new</i>
+                                                Etudiants
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body ">
+                            <div class="tab-content text-center">
+                                <div class="tab-pane active" id="profile_menagere">
+                                    <h2 style="color: white; font-weight: 510;">
+                                        Ménagère, vous ête a la recherche d'emploie, vous ête au bon endrois.
+                                    </h2>
+                                    <br>
+                                    
+                                    <h6 style="color: white; font-weight: 510;">
+                                        Dite non au chaumage en venant chez nous.
+                                    </h6>
+                                </div>
+                                <div class="tab-pane" id="messages_menagere">
+                                    <h2 style="color: white; font-weight: 510;">
+                                        Cher étudiant, vous voulez guagner plus d'argent tout en allant à l'université?
+                                    </h2>
+                                    <br>
+                                    
+                                    <h6 style="color: white; font-weight: 510;">
+                                        Notre plateforme vous permet de gagner d'argent à vos heure creuse
+                                    </h6>
+                                </div>
+                                
+                                <a *ngIf="estMenagere()" [routerLink]="['/demande']" class="btn btn-outline-neutral btn-round"> Demande en cours <i class="fa fa-star"></i></a>
+                                <a *ngIf="!estConnecter()" [routerLink]="['/signup/menagere']" class="btn btn-outline-neutral btn-round"> S'inscrire <i class="fa fa-sign-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tabs with icons on Card -->
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+</div>
